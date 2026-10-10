@@ -1,0 +1,26 @@
+parameters:
+    polluteScopeWithLoopInitialAssignments: false
+    polluteScopeWithAlwaysIterableForeach: false
+    checkExplicitMixedMissingReturn: true
+    checkFunctionNameCase: true
+    reportMaybesInMethodSignatures: true
+    reportStaticMethodSignatures: true
+    strictRules:
+        allRules: false
+        disallowedLooseComparison: false
+        booleansInConditions: false
+        uselessCast: false
+        requireParentConstructorCall: true
+        overwriteVariablesWithLoop: false
+        closureUsesThis: false
+        matchingInheritedMethodNames: true
+        numericOperandsInArithmeticOperators: true
+        switchConditionsMatchingType: true
+        noVariableVariables: false
+        strictArrayFilter: false
+
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+rules:
+    - PHPStan\Rules\DisallowedConstructs\DisallowedImplicitArrayCreationRule

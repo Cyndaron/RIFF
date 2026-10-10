@@ -1,0 +1,32 @@
+{
+  "name": "cyndaron/riff",
+  "description": "Extract and build RIFF files easily",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.1",
+    "cyndaron/binary-handler": "dev-master"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "*",
+    "friendsofphp/php-cs-fixer": "*",
+    "phpstan/phpstan-strict-rules": "2.1.x-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cyndaron\\RIFF\\": "src/"
+    }
+  },
+  "scripts": {
+    "phpstan": [
+      "vendor/bin/phpstan analyse src --level 9"
+    ],
+    "cs-check": [
+      "vendor/bin/php-cs-fixer fix src/ --allow-risky=yes --dry-run --diff"
+    ],
+    "cs-fix": [
+      "vendor/bin/php-cs-fixer fix src/ --allow-risky=yes"
+    ]
+  }
+}
